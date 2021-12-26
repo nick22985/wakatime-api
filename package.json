@@ -10,16 +10,28 @@
 	"files": [
 		"lib/**/*"
 	],
-    "keywords": [
-    "wakatime"
+	"keywords": [
+		"wakatime"
 	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/nick22985/wakatime-api"
 	},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"start": "nodemon --exec ts-node src/index.ts",
+		"test": "jest"
 	},
 	"author": "nick22985",
-	"license": "MIT"
+	"license": "MIT",
+	"dependencies": {
+		"@types/jest": "^27.0.3",
+		"axios": "^0.24.0",
+		"dotenv": "^10.0.0",
+		"nodemon": "^2.0.15",
+		"ts-node": "^10.4.0"
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.4",
+		"jest": "^27.4.5"
+	}
 }
