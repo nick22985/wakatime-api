@@ -1,11 +1,25 @@
 {
-  "name": "wakatime-api",
-  "version": "1.0.0",
-  "description": "A typescript npm packages to interact with the wakatime api",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "nick22985",
-  "license": "ISC"
+	"name": "wakatime-api",
+	"version": "0.0.1",
+	"description": "A typescript npm packages to interact with the wakatime api",
+	"main": "lib/index.js",
+	"types": "lib/index.d.ts",
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"lib/**/*"
+	],
+    "keywords": [
+    "wakatime"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nick22985/wakatime-api"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "nick22985",
+	"license": "MIT"
 }
