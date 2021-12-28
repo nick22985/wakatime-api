@@ -291,7 +291,7 @@ class WakaTimeApi {
 	 * @desc List a user’s organizations.
 	 * @scope read_orgs
 	 * @param userId users wakatime id
-	 * @param org org name
+	 * @param org org UUID
 	 * @returns Gets a users Org Dashboards.
 	 * @example await getUsersOrgDashboard("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e", "wakatime");
 	 */
@@ -306,7 +306,7 @@ class WakaTimeApi {
 	}
 	/**
 	 * @desc List the organization’s dashboards.
-	 * @param org org name
+	 * @param org org UUID
 	 * @returns Gets current users Org Dashboards.
 	 * @example await getMyOrgsDashboard("wakatime");
 	 * */
@@ -317,7 +317,7 @@ class WakaTimeApi {
 	 * @desc List an organization’s members.
 	 * @scope read_orgs
 	 * @param userId users wakatime id
-	 * @param org org name
+	 * @param org org UUID
 	 * @param dashboard dashboard name
 	 * @returns Gets a users Org Dashboard.
 	 */
@@ -335,8 +335,8 @@ class WakaTimeApi {
 	}
 	/**
 	 * @desc List your organization’s members.
-	 * @param org org name
-	 * @param dashboard dashboard name
+	 * @param org org UUID
+	 * @param dashboard dashboard UUID
 	 * @returns Gets current users Org Projects.
 	 * @example await getMyOrgDashboardMembers("wakatime", "wakatime");
 	 */
@@ -347,8 +347,8 @@ class WakaTimeApi {
 	 * @desc An organization dashboard member’s coding activity for the given time range as an array of summaries segmented by day.
 	 * @scope read_orgs
 	 * @param userId users wakatime id
-	 * @param org org name
-	 * @param dashboard  dashboard name
+	 * @param org org UUID
+	 * @param dashboard  dashboard UUID
 	 * @param member member name
 	 * @param start start date
 	 * @param end end date
@@ -400,8 +400,8 @@ class WakaTimeApi {
 	}
 	/**
 	 * @desc An organization dashboard member’s coding activity for the given time range as an array of summaries segmented by day.
-	 * @param org org name
-	 * @param dashboard  dashboard name
+	 * @param org org UUID
+	 * @param dashboard dashboard UUID
 	 * @param member member name
 	 * @param start start date
 	 * @param end end date
@@ -427,8 +427,8 @@ class WakaTimeApi {
 	 * @desc A dashboard member's coding activity for the given day as an array of durations.
 	 * @scope read_orgs
 	 * @param userId users wakatime id
-	 * @param org org name
-	 * @param dashboard dashboard name
+	 * @param org org UUID
+	 * @param dashboard dashboard UUID
 	 * @param member member name
 	 * @param date date
 	 * @param project optional: project name
@@ -463,8 +463,8 @@ class WakaTimeApi {
 	}
 	/**
 	 * @desc A dashboard member's coding activity for the given day as an array of durations.
-	 * @param org org name
-	 * @param dashboard  dashboard name
+	 * @param org org UUID
+	 * @param dashboard  dashboard UUID
 	 * @param member member name
 	 * @param date date
 	 * @param project optional: project name
@@ -681,21 +681,21 @@ class WakaTimeApi {
 	 * @returns List of data exports for the user
 	 * @example await getMyDataDump();
 	 */
-	getMyUserDataDump() {
+	getMyDataDump() {
 		return this.getUserDataDump("current");
 	}
 	/**
 	 * @desc List of commits for a WakaTime project showing the time spent coding in each commit.
 	 * @scope read_logged_time
 	 * @param userId users wakatime id
-	 * @param project optional: project name
+	 * @param project project name
 	 * @param author optional: author name
 	 * @param branch optional: branch name
 	 * @param page optional: page number
 	 * @returns List of commits for the user
 	 * @example await getUserCommits("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e");
 	 */
-	getUserCommits(userId: String, project?: String, author?: String, branch?: String, page?: Number) {
+	getUserCommits(userId: String, project: String, author?: String, branch?: String, page?: Number) {
 		if (!userId) {
 			throw new Error("userId is required");
 		}
