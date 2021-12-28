@@ -4,7 +4,7 @@ dotenv.config();
 const wakatime_api_key = process.env.WAKATIME_API_KEY;
 
 const wakaClient = new wakatime.WakaTimeApi(wakatime_api_key);
-const myWakaId = "06ef56ec-e763-432c-a1cc-83e10de5b5a3";
+const myWakaId = process.env.WAKATIMEID;
 
 test("GetUser", async () => {
 	let getUser = await wakaClient.getUser(myWakaId).catch((err) => {

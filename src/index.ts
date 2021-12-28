@@ -1,4 +1,4 @@
-import { ISummaries, RANGE, SLICE_BY } from "./types/default";
+import { ISummaries, RANGE, SLICE_BY, SUMMARY_RANGE } from "./types/default";
 import axios, { AxiosInstance } from "axios";
 
 class WakaTimeApi {
@@ -58,7 +58,7 @@ class WakaTimeApi {
 	 * @returns Gets current users agents.
 	 * @example await getMyUserAgents();
 	 */
-	getMyUserAgents(): Promise<JSON> {
+	getMyAgents(): Promise<JSON> {
 		return this.getUserAgents("current");
 	}
 	/**
@@ -72,7 +72,7 @@ class WakaTimeApi {
 	 * @param timeout optional: timeout in seconds
 	 * @param writes_only optional: only return write data
 	 * @param timezone optional: timezone
-	 * @param range optional: RANGE enum value (LAST_7_DAYS, LAST_30_DAYS, LAST_6_MONTHS, LAST_YEAR)
+	 * @param range optional: RANGE enum value
 	 * @returns Summary data for a user.
 	 * @example await getUserSummaries("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e", new Date("2019-01-01"), new Date("2020-01-31"));
 	 */
@@ -85,7 +85,7 @@ class WakaTimeApi {
 		timeout?: Number,
 		writes_only?: Boolean,
 		timezone?: String,
-		range?: RANGE
+		range?: SUMMARY_RANGE
 	): Promise<JSON> {
 		let params: ISummaries = {
 			start: start,
@@ -117,7 +117,7 @@ class WakaTimeApi {
 	 * @param timeout optional: timeout in seconds
 	 * @param writes_only optional: only return write data
 	 * @param timezone optional: timezone
-	 * @param range optional: RANGE enum value (LAST_7_DAYS, LAST_30_DAYS, LAST_6_MONTHS, LAST_YEAR)
+	 * @param range optional: RANGE enum value
 	 * @returns Summary data for current user.
 	 * @example await getUserSummaries(new Date("2019-01-01"), new Date("2020-01-31"));
 	 */
@@ -129,7 +129,7 @@ class WakaTimeApi {
 		timeout?: Number,
 		writes_only?: Boolean,
 		timezone?: String,
-		range?: RANGE
+		range?: SUMMARY_RANGE
 	) {
 		return this.getUserSummaries("current", start, end, project, branches, timeout, writes_only, timezone, range);
 	}
@@ -776,4 +776,4 @@ class WakaTimeApi {
 	}
 }
 
-export { WakaTimeApi, RANGE, SLICE_BY };
+export { WakaTimeApi, RANGE, SLICE_BY, SUMMARY_RANGE };
