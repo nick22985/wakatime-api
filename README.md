@@ -71,7 +71,7 @@ const client = new wakatime.WakatimeApi("Api-key");
 ```js
 import { WakaTimeApi, RANGE, SLICE_BY, SUMMARY_RANGE } from "@nick22985/wakatime-api";
 
-const client = new wakatime.WakatimeApi("Api-key", "Custom-base-URL");
+const client = new WakatimeApi("Api-key", "Custom-base-URL");
 ```
 
 <br>
