@@ -181,7 +181,7 @@ let getMyAgents = await wakaClient.getMyAgents();
 - @example await getUserSummaries("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e", "2019-01-01", "2020-01-31");
 
 ```js
-let getUserSummaries = await wakaClient.getUserSummaries(myWakaId, "2019-01-01", "2020-01-31");
+let getUserSummaries = await wakaClient.getUserSummaries("<Wakatime ID>", "2019-01-01", "2020-01-31");
 ```
 
 #### <strong>getMySummaries</strong>
@@ -226,7 +226,7 @@ let getStatsAggregated = await wakaClient.getStatsAggregated(SUMMARY_RANGE.LAST_
 - @example await getStats("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e", RANGE.LAST_7_DAYS);
 
 ```js
-let getStats = await wakaClient.getStats(myWakaId, wakatime.RANGE.LAST_7_DAYS);
+let getStats = await wakaClient.getStats("<Wakatime ID>", wakatime.RANGE.LAST_7_DAYS);
 ```
 
 #### <strong>getMyStats</strong>
@@ -254,7 +254,7 @@ let getMyStats = await wakaClient.getMyStats(wakatime.RANGE.LAST_7_DAYS);
 - @example await getUserProjects("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e");
 
 ```js
-let getUserProjects = await wakaClient.getUserProjects(myWakaId);
+let getUserProjects = await wakaClient.getUserProjects("<Wakatime ID>");
 ```
 
 #### <strong>getMyProjects</strong>
@@ -266,7 +266,7 @@ let getUserProjects = await wakaClient.getUserProjects(myWakaId);
 - @example await getUserProjects("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e");
 
 ```js
-let getUserProjects = await wakaClient.getMyProjects(myWakaId);
+let getUserProjects = await wakaClient.getMyProjects("<Wakatime ID>");
 ```
 
 #### <strong>getPrivateLeaderboardsLeaders</strong>
@@ -282,7 +282,7 @@ let getUserProjects = await wakaClient.getMyProjects(myWakaId);
 - @example await getUserLeaderboard("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e", "wakatime");<br>
 
 ```js
-let getPrivateLeaderboardsLeaders = await wakaClient.getPrivateLeaderboardsLeaders(myWakaId, "cee8a02b-147f-4881-9b43-5d193fb77d32");
+let getPrivateLeaderboardsLeaders = await wakaClient.getPrivateLeaderboardsLeaders("<Wakatime ID>", "cee8a02b-147f-4881-9b43-5d193fb77d32");
 ```
 
 #### <strong>getMyPrivateLeaderboardsLeaders</strong>
@@ -310,7 +310,7 @@ let getMyPrivateLeaderboardsLeaders = await wakaClient.getMyPrivateLeaderboardsL
 - @example await getPrivateLeaderboards("wakatime");
 
 ```js
-let getPrivateLeaderboards = await wakaClient.getPrivateLeaderboards(myWakaId);
+let getPrivateLeaderboards = await wakaClient.getPrivateLeaderboards("<Wakatime ID>");
 ```
 
 #### <strong>getMyPrivateLeaderboards</strong>
@@ -324,7 +324,7 @@ let getPrivateLeaderboards = await wakaClient.getPrivateLeaderboards(myWakaId);
 - @example await getMyPrivateLeaderboardsLeaders("wakatime");
 
 ```js
-let getMyPrivateLeaderboards = await wakaClient.getMyPrivateLeaderboards(myWakaId);
+let getMyPrivateLeaderboards = await wakaClient.getMyPrivateLeaderboards("<Wakatime ID>");
 ```
 
 #### <strong>getUsersOrgs</strong>
@@ -336,7 +336,7 @@ let getMyPrivateLeaderboards = await wakaClient.getMyPrivateLeaderboards(myWakaI
 - @example await getUserOrgs("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e");
 
 ```js
-let getUsersOrgs = await wakaClient.getUsersOrgs(myWakaId);
+let getUsersOrgs = await wakaClient.getUsersOrgs("<Wakatime ID>");
 ```
 
 #### <strong>getMyOrgs</strong>
@@ -359,7 +359,7 @@ let getMyOrgs = await wakaClient.getMyOrgs();
 - @example await getUsersOrgDashboard("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e", "wakatime");
 
 ```js
-let getUsersOrgDashboard = await wakaClient.getUsersOrgDashboard(myWakaId, process.env.ORG);
+let getUsersOrgDashboard = await wakaClient.getUsersOrgDashboard("<Wakatime ID>", "<Wakatime Org UUID>");
 ```
 
 #### <strong>getMyOrgsDashboard</strong>
@@ -370,7 +370,7 @@ let getUsersOrgDashboard = await wakaClient.getUsersOrgDashboard(myWakaId, proce
 - @example await getMyOrgsDashboard("wakatime");
 
 ```js
-let getMyOrgsDashboard = await wakaClient.getMyOrgsDashboard(process.env.ORG);
+let getMyOrgsDashboard = await wakaClient.getMyOrgsDashboard("<Wakatime Org UUID>");
 ```
 
 #### <strong>getOrgDashboardMembers</strong>
@@ -383,7 +383,7 @@ let getMyOrgsDashboard = await wakaClient.getMyOrgsDashboard(process.env.ORG);
 - @returns Gets a users Org Dashboard.
 
 ```js
-let getOrgDashboardMembers = await wakaClient.getOrgDashboardMembers(myWakaId, process.env.ORG, process.env.DASHBOARD);
+let getOrgDashboardMembers = await wakaClient.getOrgDashboardMembers("<Wakatime ID>", "<Wakatime Org UUID>", "<Wakatime Org Dashboard>");
 ```
 
 #### <strong>getMyOrgDashboardMembers</strong>
@@ -395,7 +395,7 @@ let getOrgDashboardMembers = await wakaClient.getOrgDashboardMembers(myWakaId, p
 - @example await getMyOrgDashboardMembers("wakatime", "wakatime");
 
 ```js
-let getMyOrgDashboardMembers = await wakaClient.getMyOrgDashboardMembers(process.env.ORG, process.env.DASHBOARD);
+let getMyOrgDashboardMembers = await wakaClient.getMyOrgDashboardMembers("<Wakatime Org UUID>", "<Wakatime Org Dashboard>");
 ```
 
 #### <strong>orgDashboardMemberSummaries</strong>
@@ -416,9 +416,9 @@ let getMyOrgDashboardMembers = await wakaClient.getMyOrgDashboardMembers(process
 
 ```js
 let orgDashboardMemberSummaries = await wakaClient.orgDashboardMemberSummaries(
-	myWakaId,
-	process.env.ORG,
-	process.env.DASHBOARD,
+	"<Wakatime ID>",
+	"<Wakatime Org UUID>",
+	"<Wakatime Org Dashboard>",
 	"nick22985",
 	"2021-15-12",
 	"2021-19-12"
@@ -441,10 +441,10 @@ let orgDashboardMemberSummaries = await wakaClient.orgDashboardMemberSummaries(
 
 ```js
 let orgDashboardMemberDurations = await wakaClient.orgDashboardMemberDurations(
-	myWakaId,
-	process.env.ORG,
-	process.env.DASHBOARD,
-	myWakaId,
+	"<Wakatime ID>",
+	"<Wakatime Org UUID>",
+	"<Wakatime Org Dashboard>",
+	"<Wakatime ID>",
 	"2021-15-12"
 );
 ```
@@ -463,9 +463,9 @@ let orgDashboardMemberDurations = await wakaClient.orgDashboardMemberDurations(
 
 ```js
 let getMyOrgDashboardMemberDurations = await wakaClient.getMyOrgDashboardMemberDurations(
-	process.env.ORG,
-	process.env.DASHBOARD,
-	myWakaId,
+	"<Wakatime Org UUID>",
+	"<Wakatime Org Dashboard>",
+	"<Wakatime ID>",
 	"2021-15-12"
 );
 ```
@@ -489,7 +489,7 @@ let getMeta = await wakaClient.getMeta();
 - @example await getMachines("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e");
 
 ```js
-let getUserMachineNames = await wakaClient.getUserMachineNames(myWakaId);
+let getUserMachineNames = await wakaClient.getUserMachineNames("<Wakatime ID>");
 ```
 
 #### <strong>getMyMachineNames</strong>
@@ -499,7 +499,7 @@ let getUserMachineNames = await wakaClient.getUserMachineNames(myWakaId);
 - @example await getMyMachineNames();
 
 ```js
-let getMyMachineNames = await wakaClient.getMyMachineNames(myWakaId);
+let getMyMachineNames = await wakaClient.getMyMachineNames("<Wakatime ID>");
 ```
 
 #### <strong>getLeaders</strong>
@@ -526,7 +526,7 @@ let getLeaders = await wakaClient.getLeaders("JavaScript");
 - @example await getUserHeartbeats("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e", "2019-01-01");
 
 ```js
-let getUserHeartbeats = await wakaClient.getUserHeartbeats(myWakaId, "2021-28-12");
+let getUserHeartbeats = await wakaClient.getUserHeartbeats("<Wakatime ID>", "2021-28-12");
 ```
 
 #### <strong>getMyHeartbeats</strong>
@@ -549,7 +549,7 @@ let getMyHeartbeats = await wakaClient.getMyHeartbeats("2021-28-12");
 - @example await getUserGoals("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e");
 
 ```js
-let getUserGoals = await wakaClient.getUserGoals(myWakaId);
+let getUserGoals = await wakaClient.getUserGoals("<Wakatime ID>");
 ```
 
 #### <strong>getMyGoals</strong>
@@ -575,7 +575,7 @@ let getMyGoals = await wakaClient.getMyGoals();
 - @example await getUserExternalDurations("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e", "2019-01-01");
 
 ```js
-let getUserExternalDurations = await wakaClient.getUserExternalDurations(myWakaId, "2021-28-12");
+let getUserExternalDurations = await wakaClient.getUserExternalDurations("<Wakatime ID>", "2021-28-12");
 ```
 
 #### <strong>getMyExternalDurations</strong>
@@ -618,7 +618,7 @@ let getEditors = await wakaClient.getEditors();
 - @example await getUserDurations("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e", "2019-01-01");
 
 ```js
-let getUserDurations = await wakaClient.getUserDurations(myWakaId, "2021-28-12");
+let getUserDurations = await wakaClient.getUserDurations("<Wakatime ID>", "2021-28-12");
 ```
 
 #### <strong>getMyDurations<string>
@@ -648,7 +648,7 @@ let getMyDurations = await wakaClient.getMyDurations("2021-28-12");
 - @example await getUserDataDump("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e");
 
 ```js
-let getUserDataDump = await wakaClient.getUserDataDump(myWakaId);
+let getUserDataDump = await wakaClient.getUserDataDump("<Wakatime ID>");
 ```
 
 #### <strong>getMyDataDump</strong>
@@ -658,7 +658,7 @@ let getUserDataDump = await wakaClient.getUserDataDump(myWakaId);
 - @example await getMyDataDump();
 
 ```js
-let getMyDataDump = await wakaClient.getMyDataDump(myWakaId);
+let getMyDataDump = await wakaClient.getMyDataDump("<Wakatime ID>");
 ```
 
 #### <strong>getUserCommits</strong>
@@ -674,7 +674,7 @@ let getMyDataDump = await wakaClient.getMyDataDump(myWakaId);
 - @example await getUserCommits("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e");
 
 ```js
-let getUserCommits = await wakaClient.getUserCommits(myWakaId);
+let getUserCommits = await wakaClient.getUserCommits("<Wakatime ID>");
 ```
 
 #### <strong>getMyCommits</strong>
@@ -703,7 +703,7 @@ let getMyCommits = await wakaClient.getMyCommits();
 - @example await getUserCommit("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e", "my-project", "1234567890");
 
 ```js
-let getUserCommit = await wakaClient.getUserCommit(myWakaId, "Dev-Stats", "736ed941e069e2c910b86266243965ea745a8050");
+let getUserCommit = await wakaClient.getUserCommit("<Wakatime ID>", "Dev-Stats", "736ed941e069e2c910b86266243965ea745a8050");
 ```
 
 #### <strong>getMyCommit</strong>
@@ -729,7 +729,7 @@ let getMyCommit = await wakaClient.getMyCommit("Dev-Stats", "736ed941e069e2c910b
 - @example await getUserAllTimeSinceToday("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e");
 
 ```js
-let getUserAllTimeSinceToday = await wakaClient.getUserAllTimeSinceToday(myWakaId);
+let getUserAllTimeSinceToday = await wakaClient.getUserAllTimeSinceToday("<Wakatime ID>");
 ```
 
 #### <strong>getMyAllTimeSinceToday</strong>
@@ -742,7 +742,7 @@ let getUserAllTimeSinceToday = await wakaClient.getUserAllTimeSinceToday(myWakaI
 - @example await getMyAllTimeSinceToday();
 
 ```js
-let getMyAllTimeSinceToday = await wakaClient.getMyAllTimeSinceToday(myWakaId);
+let getMyAllTimeSinceToday = await wakaClient.getMyAllTimeSinceToday("<Wakatime ID>");
 ```
 
 ## ⛏️ Built Using <a name = "built_using"></a>
