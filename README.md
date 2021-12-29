@@ -102,302 +102,267 @@ let getUserAgents = await wakaClient.getUserAgents("1f89b85e-54a8-4f75-86a2-f9b7
 let getMyUserAgents = await wakaClient.getMyAgents();
 ```
 
-test("getMyUserAgents", async () => {
-let getMyUserAgents = await wakaClient.getMyUserAgents().catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getMyUserAgents</strong></h3>
 
-test("getUserSummaries", async () => {
-let getMyUserAgents = await wakaClient.getUserSummaries(myWakaId, new Date().toISOString(), new Date().toISOString()).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getMyUserAgents = await wakaClient.getMyUserAgents();
+```
 
-test("getMySummaries", async () => {
-let getMySummaries = await wakaClient.getMySummaries(new Date().toISOString(), new Date().toISOString()).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getUserSummaries</strong></h3>
 
-test("getStatsAggregated", async () => {
-let getStatsAggregated = await wakaClient.getStatsAggregated("last_7_days").catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getMyUserAgents = await wakaClient.getUserSummaries(myWakaId, new Date().toISOString(), new Date().toISOString());
+```
 
-// Long running tests
-jest.setTimeout(100000);
-test("getStats", async () => {
-let getStats = await wakaClient.getStats(myWakaId, wakatime.RANGE.LAST_7_DAYS).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getMySummaries</strong></h3>
 
-test("getMyStats", async () => {
-let getMyStats = await wakaClient.getMyStats(wakatime.RANGE.LAST_7_DAYS).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getMySummaries = await wakaClient.getMySummaries(new Date().toISOString(), new Date().toISOString());
+```
 
-test("getUserProjects", async () => {
-let getUserProjects = await wakaClient.getUserProjects(myWakaId).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getStatsAggregated</strong></h3>
 
-test("getMyProjects", async () => {
-let getUserProjects = await wakaClient.getMyProjects(myWakaId).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getStatsAggregated = await wakaClient.getStatsAggregated("last_7_days");
+```
 
-test("getPrivateLeaderboardsLeaders", async () => {
-let getPrivateLeaderboardsLeaders = await wakaClient
-.getPrivateLeaderboardsLeaders(myWakaId, "cee8a02b-147f-4881-9b43-5d193fb77d32")
-.catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getStats</strong></h3>
 
-test("getMyPrivateLeaderboardsLeaders", async () => {
-let getMyPrivateLeaderboardsLeaders = await wakaClient.getMyPrivateLeaderboardsLeaders("cee8a02b-147f-4881-9b43-5d193fb77d32").catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getStats = await wakaClient.getStats(myWakaId, wakatime.RANGE.LAST_7_DAYS);
+```
 
-test("getPrivateLeaderboards", async () => {
-let getPrivateLeaderboards = await wakaClient.getPrivateLeaderboards(myWakaId).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getMyStats</strong></h3>
 
-test("getMyPrivateLeaderboards", async () => {
-let getMyPrivateLeaderboards = await wakaClient.getMyPrivateLeaderboards(myWakaId).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getMyStats = await wakaClient.getMyStats(wakatime.RANGE.LAST_7_DAYS);
+```
 
-test("getUsersOrgs", async () => {
-let getUsersOrgs = await wakaClient.getUsersOrgs(myWakaId).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getUserProjects</strong></h3>
 
-test("getMyOrgs", async () => {
-let getMyOrgs = await wakaClient.getMyOrgs().catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getUserProjects = await wakaClient.getUserProjects(myWakaId);
+```
 
-test("getUsersOrgDashboard", async () => {
-let getUsersOrgDashboard = await wakaClient.getUsersOrgDashboard(myWakaId, process.env.ORG).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getMyProjects</strong></h3>
 
-test("getMyOrgsDashboard", async () => {
-let getMyOrgsDashboard = await wakaClient.getMyOrgsDashboard(process.env.ORG).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getUserProjects = await wakaClient.getMyProjects(myWakaId);
+```
 
-test("getOrgDashboardMembers", async () => {
-let getOrgDashboardMembers = await wakaClient.getOrgDashboardMembers(myWakaId, process.env.ORG, process.env.DASHBOARD).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getPrivateLeaderboardsLeaders</strong></h3>
 
-test("getMyOrgDashboardMembers", async () => {
-let getMyOrgDashboardMembers = await wakaClient.getMyOrgDashboardMembers(process.env.ORG, process.env.DASHBOARD).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getPrivateLeaderboardsLeaders = await wakaClient.getPrivateLeaderboardsLeaders(myWakaId, "cee8a02b-147f-4881-9b43-5d193fb77d32");
+```
 
-test("orgDashboardMemberSummaries", async () => {
-let orgDashboardMemberSummaries = await wakaClient
-.orgDashboardMemberSummaries(myWakaId, process.env.ORG, process.env.DASHBOARD, myWakaId, "2021-15-12", "2021-19-12")
-.catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getMyPrivateLeaderboardsLeaders</strong></h3>
 
-test("orgDashboardMemberDurations", async () => {
-let orgDashboardMemberDurations = await wakaClient
-.orgDashboardMemberDurations(myWakaId, process.env.ORG, process.env.DASHBOARD, myWakaId, "2021-15-12")
-.catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getMyPrivateLeaderboardsLeaders = await wakaClient.getMyPrivateLeaderboardsLeaders("cee8a02b-147f-4881-9b43-5d193fb77d32");
+```
 
-test("getMyOrgDashboardMemberDurations", async () => {
-let getMyOrgDashboardMemberDurations = await wakaClient
-.getMyOrgDashboardMemberDurations(process.env.ORG, process.env.DASHBOARD, myWakaId, "2021-15-12")
-.catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getPrivateLeaderboards</strong></h3>
 
-test("getMeta", async () => {
-let getMeta = await wakaClient.getMeta().catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getPrivateLeaderboards = await wakaClient.getPrivateLeaderboards(myWakaId);
+```
 
-test("getUserMachineNames", async () => {
-let getUserMachineNames = await wakaClient.getUserMachineNames(myWakaId).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getMyPrivateLeaderboards</strong></h3>
 
-test("getMyMachineNames", async () => {
-let getMyMachineNames = await wakaClient.getMyMachineNames(myWakaId).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getMyPrivateLeaderboards = await wakaClient.getMyPrivateLeaderboards(myWakaId);
+```
 
-test("getLeaders", async () => {
-let getLeaders = await wakaClient.getLeaders("JavaScript").catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getUsersOrgs</strong></h3>
 
-test("getUserHeartbeats", async () => {
-let getUserHeartbeats = await wakaClient.getUserHeartbeats(myWakaId, "2021-28-12").catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getUsersOrgs = await wakaClient.getUsersOrgs(myWakaId);
+```
 
-test("getUserHeartbeats", async () => {
-let getUserHeartbeats = await wakaClient.getUserHeartbeats(myWakaId, "2021-28-12").catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getMyOrgs</strong></h3>
 
-test("getMyHeartbeats", async () => {
-let getUserHeartbeats = await wakaClient.getUserHeartbeats("2021-28-12").catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getMyOrgs = await wakaClient.getMyOrgs();
+```
 
-test("getUserGoals", async () => {
-let getUserGoals = await wakaClient.getUserGoals(myWakaId).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getUsersOrgDashboard</strong></h3>
 
-test("getMyGoals", async () => {
-let getMyGoals = await wakaClient.getMyGoals().catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getUsersOrgDashboard = await wakaClient.getUsersOrgDashboard(myWakaId, process.env.ORG);
+```
 
-test("getUserExternalDurations", async () => {
-let getUserExternalDurations = await wakaClient.getUserExternalDurations(myWakaId, "2021-28-12").catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getMyOrgsDashboard</strong></h3>
 
-test("getMyExternalDurations", async () => {
-let getMyExternalDurations = await wakaClient.getMyExternalDurations("2021-28-12").catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getMyOrgsDashboard = await wakaClient.getMyOrgsDashboard(process.env.ORG);
+```
 
-test("getEditors", async () => {
-let getEditors = await wakaClient.getEditors().catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getOrgDashboardMembers</strong></h3>
 
-test("getUserDurations", async () => {
-let getUserDurations = await wakaClient.getUserDurations(myWakaId, "2021-28-12").catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getOrgDashboardMembers = await wakaClient.getOrgDashboardMembers(myWakaId, process.env.ORG, process.env.DASHBOARD);
+```
 
-test("getUserDataDump", async () => {
-let getUserDataDump = await wakaClient.getUserDataDump(myWakaId).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getMyOrgDashboardMembers</strong></h3>
 
-test("getMyDataDump", async () => {
-let getMyDataDump = await wakaClient.getMyDataDump(myWakaId).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let getMyOrgDashboardMembers = await wakaClient.getMyOrgDashboardMembers(process.env.ORG, process.env.DASHBOARD);
+```
 
-test("getUserCommits", async () => {
-let getUserCommits = await wakaClient.getUserCommits(myWakaId).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>orgDashboardMemberSummaries</strong></h3>
 
-test("getMyCommits", async () => {
-let getMyCommits = await wakaClient.getMyCommits().catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let orgDashboardMemberSummaries = await wakaClient.orgDashboardMemberSummaries(
+	myWakaId,
+	process.env.ORG,
+	process.env.DASHBOARD,
+	"nick22985",
+	"2021-15-12",
+	"2021-19-12"
+);
+```
 
-test("getUserCommit", async () => {
-let getUserCommit = await wakaClient.getUserCommit(myWakaId, "Dev-Stats", "736ed941e069e2c910b86266243965ea745a8050").catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>orgDashboardMemberDurations</strong></h3>
 
-test("getMyCommit", async () => {
-let getMyCommit = await wakaClient.getMyCommit("Dev-Stats", "736ed941e069e2c910b86266243965ea745a8050").catch((err) => {
-console.log(err);
-throw err;
-});
-});
+```js
+let orgDashboardMemberDurations = await wakaClient.orgDashboardMemberDurations(
+	myWakaId,
+	process.env.ORG,
+	process.env.DASHBOARD,
+	myWakaId,
+	"2021-15-12"
+);
+```
 
-test("getAllTimeSinceToday", async () => {
-let getAllTimeSinceToday = await wakaClient.getAllTimeSinceToday(myWakaId).catch((err) => {
-console.log(err);
-throw err;
-});
-});
+<h3><strong>getMyOrgDashboardMemberDurations</strong></h3>
+
+```js
+let getMyOrgDashboardMemberDurations = await wakaClient.getMyOrgDashboardMemberDurations(
+	process.env.ORG,
+	process.env.DASHBOARD,
+	myWakaId,
+	"2021-15-12"
+);
+```
+
+<h3><strong>getMeta</strong></h3>
+
+```js
+let getMeta = await wakaClient.getMeta();
+```
+
+<h3><strong>getUserMachineNames</strong></h3>
+```js
+let getUserMachineNames = await wakaClient.getUserMachineNames(myWakaId)
+```
+<h3><strong>getMyMachineNames</strong></h3>
+
+```js
+let getMyMachineNames = await wakaClient.getMyMachineNames(myWakaId);
+```
+
+<h3><strong>getLeaders</strong></h3>
+
+```js
+let getLeaders = await wakaClient.getLeaders("JavaScript");
+```
+
+<h3><strong>getUserHeartbeats</strong></h3>
+
+```js
+let getUserHeartbeats = await wakaClient.getUserHeartbeats(myWakaId, "2021-28-12");
+```
+
+<h3><strong>getUserHeartbeats</strong></h3>
+
+```js
+let getUserHeartbeats = await wakaClient.getUserHeartbeats(myWakaId, "2021-28-12");
+```
+
+<h3><strong>getMyHeartbeats</strong></h3>
+
+```js
+let getUserHeartbeats = await wakaClient.getUserHeartbeats("2021-28-12");
+```
+
+<h3><strong>getUserGoals</strong></h3>
+
+```js
+let getUserGoals = await wakaClient.getUserGoals(myWakaId);
+```
+
+<h3><strong>getMyGoals</strong></h3>
+
+```js
+let getMyGoals = await wakaClient.getMyGoals();
+```
+
+<h3><strong>getUserExternalDurations</strong></h3>
+
+```js
+let getUserExternalDurations = await wakaClient.getUserExternalDurations(myWakaId, "2021-28-12");
+```
+
+<h3><strong>getMyExternalDurations</strong></h3>
+
+```js
+let getMyExternalDurations = await wakaClient.getMyExternalDurations("2021-28-12");
+```
+
+<h3><strong>getEditors</strong></h3>
+
+```js
+let getEditors = await wakaClient.getEditors();
+```
+
+<h3><strong>getUserDurations</strong></h3>
+
+```js
+let getUserDurations = await wakaClient.getUserDurations(myWakaId, "2021-28-12");
+```
+
+<h3><strong>getUserDataDump</strong></h3>
+
+```js
+let getUserDataDump = await wakaClient.getUserDataDump(myWakaId);
+```
+
+<h3><strong>getMyDataDump</strong></h3>
+
+```js
+let getMyDataDump = await wakaClient.getMyDataDump(myWakaId);
+```
+
+<h3><strong>getUserCommits</strong></h3>
+
+```js
+let getUserCommits = await wakaClient.getUserCommits(myWakaId);
+```
+
+<h3><strong>getMyCommits</strong></h3>
+
+```js
+let getMyCommits = await wakaClient.getMyCommits();
+```
+
+<h3><strong>getUserCommit</strong></h3>
+
+```js
+let getUserCommit = await wakaClient.getUserCommit(myWakaId, "Dev-Stats", "736ed941e069e2c910b86266243965ea745a8050");
+```
+
+<h3><strong>getMyCommit</strong></h3>
+
+```js
+let getMyCommit = await wakaClient.getMyCommit("Dev-Stats", "736ed941e069e2c910b86266243965ea745a8050");
+```
+
+<h3><strong>getAllTimeSinceToday</strong></h3>
+
+```js
+let getAllTimeSinceToday = await wakaClient.getAllTimeSinceToday(myWakaId);
+```
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
