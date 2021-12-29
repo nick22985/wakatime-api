@@ -26,51 +26,51 @@
 	- [API](#api)
 		- [Create a api instance](#create-a-api-instance)
 		- [Custom Base URL](#custom-base-url)
-		- [<strong>getUser</strong>](#getuser)
-		- [<strong>getMe</strong>](#getme)
-		- [<strong>getUserAgents</strong>](#getuseragents)
-		- [<strong>getMyAgents</strong>](#getmyagents)
-		- [<strong>getUserSummaries</strong>](#getusersummaries)
-		- [<strong>getMySummaries</strong>](#getmysummaries)
-		- [<strong>getStatsAggregated</strong>](#getstatsaggregated)
-		- [<strong>getStats</strong>](#getstats)
-		- [<strong>getMyStats</strong>](#getmystats)
-		- [<strong>getUserProjects</strong>](#getuserprojects)
-		- [<strong>getMyProjects</strong>](#getmyprojects)
-		- [<strong>getPrivateLeaderboardsLeaders</strong>](#getprivateleaderboardsleaders)
-		- [<strong>getMyPrivateLeaderboardsLeaders</strong>](#getmyprivateleaderboardsleaders)
-		- [<strong>getPrivateLeaderboards</strong>](#getprivateleaderboards)
-		- [<strong>getMyPrivateLeaderboards</strong>](#getmyprivateleaderboards)
-		- [<strong>getUsersOrgs</strong>](#getusersorgs)
-		- [<strong>getMyOrgs</strong>](#getmyorgs)
-		- [<strong>getUsersOrgDashboard</strong>](#getusersorgdashboard)
-		- [<strong>getMyOrgsDashboard</strong>](#getmyorgsdashboard)
-		- [<strong>getOrgDashboardMembers</strong>](#getorgdashboardmembers)
-		- [<strong>getMyOrgDashboardMembers</strong>](#getmyorgdashboardmembers)
-		- [<strong>orgDashboardMemberSummaries</strong>](#orgdashboardmembersummaries)
-		- [<strong>orgDashboardMemberDurations</strong>](#orgdashboardmemberdurations)
-		- [<strong>getMyOrgDashboardMemberDurations</strong>](#getmyorgdashboardmemberdurations)
-		- [<strong>getMeta</strong>](#getmeta)
-		- [<strong>getUserMachineNames</strong>](#getusermachinenames)
-		- [<strong>getMyMachineNames</strong>](#getmymachinenames)
-		- [<strong>getLeaders</strong>](#getleaders)
-		- [<strong>getUserHeartbeats</strong>](#getuserheartbeats)
-		- [<strong>getMyHeartbeats</strong>](#getmyheartbeats)
-		- [<strong>getUserGoals</strong>](#getusergoals)
-		- [<strong>getMyGoals</strong>](#getmygoals)
-		- [<strong>getUserExternalDurations</strong>](#getuserexternaldurations)
-		- [<strong>getMyExternalDurations</strong>](#getmyexternaldurations)
-		- [<strong>getEditors</strong>](#geteditors)
-		- [<strong>getUserDurations</strong>](#getuserdurations)
-		- [<strong>getMyDurations<string>](#stronggetmydurationsstring)
-		- [<strong>getUserDataDump</strong>](#getuserdatadump)
-		- [<strong>getMyDataDump</strong>](#getmydatadump)
-		- [<strong>getUserCommits</strong>](#getusercommits)
-		- [<strong>getMyCommits</strong>](#getmycommits)
-		- [<strong>getUserCommit</strong>](#getusercommit)
-		- [<strong>getMyCommit</strong>](#getmycommit)
-		- [<strong>getUserAllTimeSinceToday</strong>](#getuseralltimesincetoday)
-		- [<strong>getMyAllTimeSinceToday</strong>](#getmyalltimesincetoday)
+		- [getUser](#getuser)
+		- [getMe](#getme)
+		- [getUserAgents](#getuseragents)
+		- [getMyAgents](#getmyagents)
+		- [getUserSummaries](#getusersummaries)
+		- [getMySummaries](#getmysummaries)
+		- [getStatsAggregated](#getstatsaggregated)
+		- [getStats](#getstats)
+		- [getMyStats](#getmystats)
+		- [getUserProjects](#getuserprojects)
+		- [getMyProjects](#getmyprojects)
+		- [getPrivateLeaderboardsLeaders](#getprivateleaderboardsleaders)
+		- [getMyPrivateLeaderboardsLeaders](#getmyprivateleaderboardsleaders)
+		- [getPrivateLeaderboards](#getprivateleaderboards)
+		- [getMyPrivateLeaderboards](#getmyprivateleaderboards)
+		- [getUsersOrgs](#getusersorgs)
+		- [getMyOrgs](#getmyorgs)
+		- [getUsersOrgDashboard](#getusersorgdashboard)
+		- [getMyOrgsDashboard](#getmyorgsdashboard)
+		- [getOrgDashboardMembers](#getorgdashboardmembers)
+		- [getMyOrgDashboardMembers](#getmyorgdashboardmembers)
+		- [orgDashboardMemberSummaries](#orgdashboardmembersummaries)
+		- [orgDashboardMemberDurations](#orgdashboardmemberdurations)
+		- [getMyOrgDashboardMemberDurations](#getmyorgdashboardmemberdurations)
+		- [getMeta](#getmeta)
+		- [getUserMachineNames](#getusermachinenames)
+		- [getMyMachineNames](#getmymachinenames)
+		- [getLeaders](#getleaders)
+		- [getUserHeartbeats](#getuserheartbeats)
+		- [getMyHeartbeats](#getmyheartbeats)
+		- [getUserGoals](#getusergoals)
+		- [getMyGoals](#getmygoals)
+		- [getUserExternalDurations](#getuserexternaldurations)
+		- [getMyExternalDurations](#getmyexternaldurations)
+		- [getEditors](#geteditors)
+		- [getUserDurations](#getuserdurations)
+		- [getMyDurations<string>](#getmydurationsstring)
+		- [getUserDataDump](#getuserdatadump)
+		- [getMyDataDump](#getmydatadump)
+		- [getUserCommits](#getusercommits)
+		- [getMyCommits](#getmycommits)
+		- [getUserCommit](#getusercommit)
+		- [getMyCommit](#getmycommit)
+		- [getUserAllTimeSinceToday](#getuseralltimesincetoday)
+		- [getMyAllTimeSinceToday](#getmyalltimesincetoday)
 - [⛏️ Built Using <a name = "built_using"></a>](#️-built-using-)
 - [✍️ Authors <a name = "authors"></a>](#️-authors-)
 
@@ -123,7 +123,7 @@ import { WakaTimeApi, RANGE, SLICE_BY, SUMMARY_RANGE } from "@nick22985/wakatime
 const client = new WakatimeApi("Api-key", "Custom-base-URL");
 ```
 
-#### <strong>getUser</strong>
+#### getUser
 
 - @desc Gets a users stats. <br>
 - @scope email <br>
@@ -135,7 +135,7 @@ const client = new WakatimeApi("Api-key", "Custom-base-URL");
 let getUser = await client.getUser("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e");
 ```
 
-#### <strong>getMe</strong>
+#### getMe
 
 - @desc Gets your stats <br>
 - @returns Current users waka time data. <br>
@@ -145,7 +145,7 @@ let getUser = await client.getUser("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e");
 let getMe = await wakaClient.getMe();
 ```
 
-#### <strong>getUserAgents</strong>
+#### getUserAgents
 
 - @desc List of plugins which have sent data for a user. <br>
 - @scope read_logged_time <br>
@@ -157,7 +157,7 @@ let getMe = await wakaClient.getMe();
 let getUserAgents = await wakaClient.getUserAgents("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e");
 ```
 
-#### <strong>getMyAgents</strong>
+#### getMyAgents
 
 - @desc List of plugins which have sent data for this user.<br>
 - @returns Gets current users agents.<br>
@@ -167,7 +167,7 @@ let getUserAgents = await wakaClient.getUserAgents("1f89b85e-54a8-4f75-86a2-f9b7
 let getMyAgents = await wakaClient.getMyAgents();
 ```
 
-#### <strong>getUserSummaries</strong>
+#### getUserSummaries
 
 - @desc A user's coding activity for the given time range as an array of summaries segmented by day.<br>
 - @scope read_logged_time<br>
@@ -187,7 +187,7 @@ let getMyAgents = await wakaClient.getMyAgents();
 let getUserSummaries = await wakaClient.getUserSummaries("<Wakatime ID>", "2019-01-01", "2020-01-31");
 ```
 
-#### <strong>getMySummaries</strong>
+#### getMySummaries
 
 - @desc A your coding activity for the given time range as an array of summaries segmented by day. <br>
 - @param start start date in ISO FORMAT<br>
@@ -205,7 +205,7 @@ let getUserSummaries = await wakaClient.getUserSummaries("<Wakatime ID>", "2019-
 let getMySummaries = await wakaClient.getMySummaries("2019-01-01", "2020-01-31");
 ```
 
-#### <strong>getStatsAggregated</strong>
+#### getStatsAggregated
 
 - @desc Aggregate stats of all WakaTime users over the given time range.<br>
 - @param range optional: RANGE enum value (LAST_7_DAYS, LAST_30_DAYS, LAST_6_MONTHS, LAST_YEAR)<br>
@@ -216,7 +216,7 @@ let getMySummaries = await wakaClient.getMySummaries("2019-01-01", "2020-01-31")
 let getStatsAggregated = await wakaClient.getStatsAggregated(SUMMARY_RANGE.LAST_7_DAYS);
 ```
 
-#### <strong>getStats</strong>
+#### getStats
 
 - @desc A user's coding activity for the given time range.<br>
 - @scope read_stats<br>
@@ -232,7 +232,7 @@ let getStatsAggregated = await wakaClient.getStatsAggregated(SUMMARY_RANGE.LAST_
 let getStats = await wakaClient.getStats("<Wakatime ID>", wakatime.RANGE.LAST_7_DAYS);
 ```
 
-#### <strong>getMyStats</strong>
+#### getMyStats
 
 - @desc A user's coding activity for the given time range.<br>
 - @scope read_stats<br>
@@ -247,7 +247,7 @@ let getStats = await wakaClient.getStats("<Wakatime ID>", wakatime.RANGE.LAST_7_
 let getMyStats = await wakaClient.getMyStats(wakatime.RANGE.LAST_7_DAYS);
 ```
 
-#### <strong>getUserProjects</strong>
+#### getUserProjects
 
 - @desc List of WakaTime projects for a user. <br>
 - @scope read_logged_time<br>
@@ -260,7 +260,7 @@ let getMyStats = await wakaClient.getMyStats(wakatime.RANGE.LAST_7_DAYS);
 let getUserProjects = await wakaClient.getUserProjects("<Wakatime ID>");
 ```
 
-#### <strong>getMyProjects</strong>
+#### getMyProjects
 
 - @desc List of WakaTime projects for a user. <br>
 - @scope read_logged_time<br>
@@ -272,7 +272,7 @@ let getUserProjects = await wakaClient.getUserProjects("<Wakatime ID>");
 let getUserProjects = await wakaClient.getMyProjects("<Wakatime ID>");
 ```
 
-#### <strong>getPrivateLeaderboardsLeaders</strong>
+#### getPrivateLeaderboardsLeaders
 
 - @desc List of users in this private leaderboard ranked by coding activity in descending order. <br>
 - @scope read_private_leaderboards<br>
@@ -288,7 +288,7 @@ let getUserProjects = await wakaClient.getMyProjects("<Wakatime ID>");
 let getPrivateLeaderboardsLeaders = await wakaClient.getPrivateLeaderboardsLeaders("<Wakatime ID>", "cee8a02b-147f-4881-9b43-5d193fb77d32");
 ```
 
-#### <strong>getMyPrivateLeaderboardsLeaders</strong>
+#### getMyPrivateLeaderboardsLeaders
 
 - @desc List of users in this private leaderboard ranked by coding activity in descending order. <br>
 - @param board board name<br>
@@ -302,7 +302,7 @@ let getPrivateLeaderboardsLeaders = await wakaClient.getPrivateLeaderboardsLeade
 let getMyPrivateLeaderboardsLeaders = await wakaClient.getMyPrivateLeaderboardsLeaders("cee8a02b-147f-4881-9b43-5d193fb77d32");
 ```
 
-#### <strong>getPrivateLeaderboards</strong>
+#### getPrivateLeaderboards
 
 - @desc List of users in your private leaderboard ranked by coding activity in descending order. <br>
 - @param board board name <br>
@@ -316,7 +316,7 @@ let getMyPrivateLeaderboardsLeaders = await wakaClient.getMyPrivateLeaderboardsL
 let getPrivateLeaderboards = await wakaClient.getPrivateLeaderboards("<Wakatime ID>");
 ```
 
-#### <strong>getMyPrivateLeaderboards</strong>
+#### getMyPrivateLeaderboards
 
 - @desc List of users in your private leaderboard ranked by coding activity in descending order. <br>
 - @param board board name<br>
@@ -330,7 +330,7 @@ let getPrivateLeaderboards = await wakaClient.getPrivateLeaderboards("<Wakatime 
 let getMyPrivateLeaderboards = await wakaClient.getMyPrivateLeaderboards("<Wakatime ID>");
 ```
 
-#### <strong>getUsersOrgs</strong>
+#### getUsersOrgs
 
 - @desc List a user’s organizations. <br>
 - @scope read_orgs<br>
@@ -342,7 +342,7 @@ let getMyPrivateLeaderboards = await wakaClient.getMyPrivateLeaderboards("<Wakat
 let getUsersOrgs = await wakaClient.getUsersOrgs("<Wakatime ID>");
 ```
 
-#### <strong>getMyOrgs</strong>
+#### getMyOrgs
 
 - @desc List a user’s organizations.
 - @returns Gets current users Orgs.
@@ -352,7 +352,7 @@ let getUsersOrgs = await wakaClient.getUsersOrgs("<Wakatime ID>");
 let getMyOrgs = await wakaClient.getMyOrgs();
 ```
 
-#### <strong>getUsersOrgDashboard</strong>
+#### getUsersOrgDashboard
 
 - @desc List a user’s organizations.
 - @scope read_orgs
@@ -365,7 +365,7 @@ let getMyOrgs = await wakaClient.getMyOrgs();
 let getUsersOrgDashboard = await wakaClient.getUsersOrgDashboard("<Wakatime ID>", "<Wakatime Org UUID>");
 ```
 
-#### <strong>getMyOrgsDashboard</strong>
+#### getMyOrgsDashboard
 
 - @desc List the organization’s dashboards.
 - @param org org UUID
@@ -376,7 +376,7 @@ let getUsersOrgDashboard = await wakaClient.getUsersOrgDashboard("<Wakatime ID>"
 let getMyOrgsDashboard = await wakaClient.getMyOrgsDashboard("<Wakatime Org UUID>");
 ```
 
-#### <strong>getOrgDashboardMembers</strong>
+#### getOrgDashboardMembers
 
 - @desc List an organization’s members.
 - @scope read_orgs
@@ -389,7 +389,7 @@ let getMyOrgsDashboard = await wakaClient.getMyOrgsDashboard("<Wakatime Org UUID
 let getOrgDashboardMembers = await wakaClient.getOrgDashboardMembers("<Wakatime ID>", "<Wakatime Org UUID>", "<Wakatime Org Dashboard>");
 ```
 
-#### <strong>getMyOrgDashboardMembers</strong>
+#### getMyOrgDashboardMembers
 
 - @desc List your organization’s members.
 - @param org org UUID
@@ -401,7 +401,7 @@ let getOrgDashboardMembers = await wakaClient.getOrgDashboardMembers("<Wakatime 
 let getMyOrgDashboardMembers = await wakaClient.getMyOrgDashboardMembers("<Wakatime Org UUID>", "<Wakatime Org Dashboard>");
 ```
 
-#### <strong>orgDashboardMemberSummaries</strong>
+#### orgDashboardMemberSummaries
 
 - @desc An organization dashboard member’s coding activity for the given time range as an array of summaries segmented by day.
 - @scope read_orgs
@@ -428,7 +428,7 @@ let orgDashboardMemberSummaries = await wakaClient.orgDashboardMemberSummaries(
 );
 ```
 
-#### <strong>orgDashboardMemberDurations</strong>
+#### orgDashboardMemberDurations
 
 - @desc A dashboard member's coding activity for the given day as an array of durations.
 - @scope read_orgs
@@ -452,7 +452,7 @@ let orgDashboardMemberDurations = await wakaClient.orgDashboardMemberDurations(
 );
 ```
 
-#### <strong>getMyOrgDashboardMemberDurations</strong>
+#### getMyOrgDashboardMemberDurations
 
 - @desc A dashboard member's coding activity for the given day as an array of durations.
 - @param org org UUID
@@ -473,7 +473,7 @@ let getMyOrgDashboardMemberDurations = await wakaClient.getMyOrgDashboardMemberD
 );
 ```
 
-#### <strong>getMeta</strong>
+#### getMeta
 
 - @desc A dashboard member's coding activity for the given day as an array of durations.
 - @returns Gets information about WakaTime.
@@ -483,7 +483,7 @@ let getMyOrgDashboardMemberDurations = await wakaClient.getMyOrgDashboardMemberD
 let getMeta = await wakaClient.getMeta();
 ```
 
-#### <strong>getUserMachineNames</strong>
+#### getUserMachineNames
 
 - @desc List of machines for this user.
 - @scope read_logged_time
@@ -495,7 +495,7 @@ let getMeta = await wakaClient.getMeta();
 let getUserMachineNames = await wakaClient.getUserMachineNames("<Wakatime ID>");
 ```
 
-#### <strong>getMyMachineNames</strong>
+#### getMyMachineNames
 
 - @desc List of machines for this user.
 - @returns Gets current users Machine names.
@@ -505,7 +505,7 @@ let getUserMachineNames = await wakaClient.getUserMachineNames("<Wakatime ID>");
 let getMyMachineNames = await wakaClient.getMyMachineNames("<Wakatime ID>");
 ```
 
-#### <strong>getLeaders</strong>
+#### getLeaders
 
 - @desc List of users ranked by coding activity in descending order.
 - @param language language name
@@ -519,7 +519,7 @@ let getMyMachineNames = await wakaClient.getMyMachineNames("<Wakatime ID>");
 let getLeaders = await wakaClient.getLeaders("JavaScript");
 ```
 
-#### <strong>getUserHeartbeats</strong>
+#### getUserHeartbeats
 
 - @desc A user's heartbeats sent from plugins for the given day as an array.
 - @scope read_logged_time
@@ -532,7 +532,7 @@ let getLeaders = await wakaClient.getLeaders("JavaScript");
 let getUserHeartbeats = await wakaClient.getUserHeartbeats("<Wakatime ID>", "2021-28-12");
 ```
 
-#### <strong>getMyHeartbeats</strong>
+#### getMyHeartbeats
 
 - @desc A user's heartbeats sent from plugins for the given day as an array.
 - @param date date
@@ -543,7 +543,7 @@ let getUserHeartbeats = await wakaClient.getUserHeartbeats("<Wakatime ID>", "202
 let getMyHeartbeats = await wakaClient.getMyHeartbeats("2021-28-12");
 ```
 
-#### <strong>getUserGoals</strong>
+#### getUserGoals
 
 - @desc List a user’s goals.
 - @scope read_logged_time
@@ -555,7 +555,7 @@ let getMyHeartbeats = await wakaClient.getMyHeartbeats("2021-28-12");
 let getUserGoals = await wakaClient.getUserGoals("<Wakatime ID>");
 ```
 
-#### <strong>getMyGoals</strong>
+#### getMyGoals
 
 - @desc List a user’s goals.
 - @returns get current users Heartbeats.
@@ -565,7 +565,7 @@ let getUserGoals = await wakaClient.getUserGoals("<Wakatime ID>");
 let getMyGoals = await wakaClient.getMyGoals();
 ```
 
-#### <strong>getUserExternalDurations</strong>
+#### getUserExternalDurations
 
 - @desc A user's external durations for the given day.
 - @scope read_logged_time
@@ -581,7 +581,7 @@ let getMyGoals = await wakaClient.getMyGoals();
 let getUserExternalDurations = await wakaClient.getUserExternalDurations("<Wakatime ID>", "2021-28-12");
 ```
 
-#### <strong>getMyExternalDurations</strong>
+#### getMyExternalDurations
 
 - @desc A user's external durations for the given day.
 - @param date date
@@ -594,7 +594,7 @@ let getUserExternalDurations = await wakaClient.getUserExternalDurations("<Wakat
 let getMyExternalDurations = await wakaClient.getMyExternalDurations("2021-28-12");
 ```
 
-#### <strong>getEditors</strong>
+#### getEditors
 
 - @desc List of WakaTime IDE plugins, latest plugin versions, and their color used on WakaTime charts.
 - @param unreleased Show unreleased editor plugins
@@ -605,7 +605,7 @@ let getMyExternalDurations = await wakaClient.getMyExternalDurations("2021-28-12
 let getEditors = await wakaClient.getEditors();
 ```
 
-#### <strong>getUserDurations</strong>
+#### getUserDurations
 
 - @desc A user's coding activity for the given day as an array of durations
 - @scope read_logged_time
@@ -624,7 +624,7 @@ let getEditors = await wakaClient.getEditors();
 let getUserDurations = await wakaClient.getUserDurations("<Wakatime ID>", "2021-28-12");
 ```
 
-#### <strong>getMyDurations<string>
+#### getMyDurations<string>
 
 - @desc Your coding activity for the given day as an array of durations
 - @scope read_logged_time
@@ -642,7 +642,7 @@ let getUserDurations = await wakaClient.getUserDurations("<Wakatime ID>", "2021-
 let getMyDurations = await wakaClient.getMyDurations("2021-28-12");
 ```
 
-#### <strong>getUserDataDump</strong>
+#### getUserDataDump
 
 - @desc List data exports for the user.
 - @scope read_logged_time
@@ -654,7 +654,7 @@ let getMyDurations = await wakaClient.getMyDurations("2021-28-12");
 let getUserDataDump = await wakaClient.getUserDataDump("<Wakatime ID>");
 ```
 
-#### <strong>getMyDataDump</strong>
+#### getMyDataDump
 
 - @desc List data exports for the user.
 - @returns List of data exports for the user
@@ -664,7 +664,7 @@ let getUserDataDump = await wakaClient.getUserDataDump("<Wakatime ID>");
 let getMyDataDump = await wakaClient.getMyDataDump("<Wakatime ID>");
 ```
 
-#### <strong>getUserCommits</strong>
+#### getUserCommits
 
 - @desc List of commits for a WakaTime project showing the time spent coding in each commit.
 - @scope read_logged_time
@@ -680,7 +680,7 @@ let getMyDataDump = await wakaClient.getMyDataDump("<Wakatime ID>");
 let getUserCommits = await wakaClient.getUserCommits("<Wakatime ID>");
 ```
 
-#### <strong>getMyCommits</strong>
+#### getMyCommits
 
 - @desc List of commits for a WakaTime project showing the time spent coding in each commit.
 - @param project optional: project name
@@ -694,7 +694,7 @@ let getUserCommits = await wakaClient.getUserCommits("<Wakatime ID>");
 let getMyCommits = await wakaClient.getMyCommits();
 ```
 
-#### <strong>getUserCommit</strong>
+#### getUserCommit
 
 - @desc A single commit from a WakaTime project showing the time spent coding on the commit.
 - @scope read_logged_time
@@ -709,7 +709,7 @@ let getMyCommits = await wakaClient.getMyCommits();
 let getUserCommit = await wakaClient.getUserCommit("<Wakatime ID>", "Dev-Stats", "736ed941e069e2c910b86266243965ea745a8050");
 ```
 
-#### <strong>getMyCommit</strong>
+#### getMyCommit
 
 - @desc A single commit from a WakaTime project showing the time spent coding on the commit.
 - @param project optional: project name
@@ -722,7 +722,7 @@ let getUserCommit = await wakaClient.getUserCommit("<Wakatime ID>", "Dev-Stats",
 let getMyCommit = await wakaClient.getMyCommit("Dev-Stats", "736ed941e069e2c910b86266243965ea745a8050");
 ```
 
-#### <strong>getUserAllTimeSinceToday</strong>
+#### getUserAllTimeSinceToday
 
 - @desc The total time logged since account created, available even for Free accounts.
 - @scope read_stats
@@ -735,7 +735,7 @@ let getMyCommit = await wakaClient.getMyCommit("Dev-Stats", "736ed941e069e2c910b
 let getUserAllTimeSinceToday = await wakaClient.getUserAllTimeSinceToday("<Wakatime ID>");
 ```
 
-#### <strong>getMyAllTimeSinceToday</strong>
+#### getMyAllTimeSinceToday
 
 - @desc The total time logged since account created, available even for Free accounts.
 - @scope read_stats
