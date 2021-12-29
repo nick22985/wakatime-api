@@ -11,8 +11,8 @@
 
 ---
 
-<p align="center"> Few lines describing your project.
-    <br>
+<p align="center"> A TypeScript NodeJs client for the <a href="https://wakatime.com/developers#introduction">wakatime API</a>
+<br>
 </p>
 
 ## 📝 Table of Contents
@@ -27,8 +27,6 @@
 - [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
-
-A `TypeScript NodeJs` client for the <a href="https://wakatime.com/developers#introduction">wakatime API</a>
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -50,7 +48,7 @@ npm i @nick22985/wakatime-api
 
 ### API
 
-###### Create a api instance
+#### Create a api instance
 
 ```js
 import { WakaTimeApi, RANGE, SLICE_BY, SUMMARY_RANGE } from "@nick22985/wakatime-api";
@@ -66,15 +64,13 @@ const wakatime = require("@nick22985/wakatime-api");
 const client = new wakatime.WakatimeApi("Api-key");
 ```
 
-###### Custom Base URL
+#### Custom Base URL
 
 ```js
 import { WakaTimeApi, RANGE, SLICE_BY, SUMMARY_RANGE } from "@nick22985/wakatime-api";
 
 const client = new WakatimeApi("Api-key", "Custom-base-URL");
 ```
-
-<br>
 
 <h3><strong>getUser</strong></h3>
 Gets a users stats.
@@ -253,9 +249,11 @@ let getMeta = await wakaClient.getMeta();
 ```
 
 <h3><strong>getUserMachineNames</strong></h3>
+
 ```js
-let getUserMachineNames = await wakaClient.getUserMachineNames(myWakaId)
+let getUserMachineNames = await wakaClient.getUserMachineNames(myWakaId);
 ```
+
 <h3><strong>getMyMachineNames</strong></h3>
 
 ```js
@@ -322,6 +320,12 @@ let getEditors = await wakaClient.getEditors();
 let getUserDurations = await wakaClient.getUserDurations(myWakaId, "2021-28-12");
 ```
 
+<h3><strong>getMyDurations<string></h3>
+
+```js
+let getMyDurations = await wakaClient.getMyDurations("2021-28-12");
+```
+
 <h3><strong>getUserDataDump</strong></h3>
 
 ```js
@@ -358,10 +362,16 @@ let getUserCommit = await wakaClient.getUserCommit(myWakaId, "Dev-Stats", "736ed
 let getMyCommit = await wakaClient.getMyCommit("Dev-Stats", "736ed941e069e2c910b86266243965ea745a8050");
 ```
 
-<h3><strong>getAllTimeSinceToday</strong></h3>
+<h3><strong>getUserAllTimeSinceToday</strong></h3>
 
 ```js
-let getAllTimeSinceToday = await wakaClient.getAllTimeSinceToday(myWakaId);
+let getUserAllTimeSinceToday = await wakaClient.getUserAllTimeSinceToday(myWakaId);
+```
+
+<h3><strong>getMyAllTimeSinceToday</strong></h3>
+
+```js
+let getMyAllTimeSinceToday = await wakaClient.getMyAllTimeSinceToday(myWakaId);
 ```
 
 ## ⛏️ Built Using <a name = "built_using"></a>

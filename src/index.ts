@@ -34,7 +34,7 @@ class WakaTimeApi {
 	}
 	/**
 	 * @desc Gets your stats
-	 * @returns Current users waka tiem data.
+	 * @returns Current users waka time data.
 	 * @example await getMe();
 	 */
 	getMe(): Promise<JSON> {
@@ -194,10 +194,10 @@ class WakaTimeApi {
 		if (!userId) {
 			throw new Error("userId is required");
 		}
-		let parmas: Object = {
+		let params: Object = {
 			query: query,
 		};
-		return this.axiosConfig.get(`users/${userId}/projects`, parmas).then((response) => response.data);
+		return this.axiosConfig.get(`users/${userId}/projects`, { params }).then((response) => response.data);
 	}
 	/**
 	 * @desc List of WakaTime projects for the current user.
@@ -231,7 +231,7 @@ class WakaTimeApi {
 		if (!board) {
 			throw new Error("board is required");
 		}
-		return this.axiosConfig.get(`users/${userId}/leaderboards/${board}`, params).then((response) => response.data);
+		return this.axiosConfig.get(`users/${userId}/leaderboards/${board}`, { params }).then((response) => response.data);
 	}
 	/**
 	 * @desc List of users in your private leaderboard ranked by coding activity in descending order.
@@ -395,7 +395,7 @@ class WakaTimeApi {
 			range: range,
 		};
 		return this.axiosConfig
-			.get(`users/${userId}/orgs/${org}/dashboards/${dashboard}/members/${member}/summaries`, params)
+			.get(`users/${userId}/orgs/${org}/dashboards/${dashboard}/members/${member}/summaries`, { params })
 			.then((response) => response.data);
 	}
 	/**
@@ -458,7 +458,7 @@ class WakaTimeApi {
 			branches: branches,
 		};
 		return this.axiosConfig
-			.get(`users/${userId}/orgs/${org}/dashboards/${dashboard}/members/${member}/durations`, params)
+			.get(`users/${userId}/orgs/${org}/dashboards/${dashboard}/members/${member}/durations`, { params })
 			.then((response) => response.data);
 	}
 	/**
@@ -477,7 +477,7 @@ class WakaTimeApi {
 	}
 	/**
 	 * @desc A dashboard member's coding activity for the given day as an array of durations.
-	 * @returns Gets infomation about WakaTime.
+	 * @returns Gets information about WakaTime.
 	 * @example await getWakaTimeInfo();
 	 */
 	getMeta() {
@@ -520,7 +520,7 @@ class WakaTimeApi {
 			country_code: country_code,
 			page: page,
 		};
-		return this.axiosConfig.get("leaders", params).then((response) => response.data);
+		return this.axiosConfig.get("leaders", { params }).then((response) => response.data);
 	}
 	/**
 	 * @desc A user's heartbeats sent from plugins for the given day as an array.
@@ -540,7 +540,7 @@ class WakaTimeApi {
 		let params: Object = {
 			date: date,
 		};
-		return this.axiosConfig.get(`users/${userId}/heartbeats`, params).then((response) => response.data);
+		return this.axiosConfig.get(`users/${userId}/heartbeats`, { params }).then((response) => response.data);
 	}
 	/**
 	 * @desc A user's heartbeats sent from plugins for the given day as an array.
@@ -596,7 +596,7 @@ class WakaTimeApi {
 			branches: branches,
 			timezone: timezone,
 		};
-		return this.axiosConfig.get(`users/${userId}/external_durations`, params).then((response) => response.data);
+		return this.axiosConfig.get(`users/${userId}/external_durations`, { params }).then((response) => response.data);
 	}
 	/**
 	 * @desc A user's external durations for the given day.
@@ -611,7 +611,7 @@ class WakaTimeApi {
 	}
 	/**
 	 * @desc List of WakaTime IDE plugins, latest plugin versions, and their color used on WakaTime charts.
-	 * @param unreleased Show unrealesed editor plugins
+	 * @param unreleased Show unreleased editor plugins
 	 * @returns List of WakaTime IDE plugins versions
 	 * @example await getEditors();
 	 */
@@ -619,7 +619,7 @@ class WakaTimeApi {
 		let params: Object = {
 			unreleased: unreleased,
 		};
-		return this.axiosConfig.get("editors", params).then((response) => response.data);
+		return this.axiosConfig.get("editors", { params }).then((response) => response.data);
 	}
 
 	/**
@@ -636,7 +636,7 @@ class WakaTimeApi {
 	 * @returns Gets a users durations.
 	 * @example await getUserDurations("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e", "2019-01-01");
 	 */
-	getUserDurations(
+	async getUserDurations(
 		userId: String,
 		date: Date,
 		project?: String,
@@ -661,8 +661,27 @@ class WakaTimeApi {
 			timezone: timezone,
 			slice_by: slice_by,
 		};
-		return this.axiosConfig.get(`users/${userId}/durations`, params).then((response) => response.data);
+		console.log(params);
+		return this.axiosConfig.get(`users/${userId}/durations`, { params }).then((response) => response.data);
 	}
+
+	/**
+	 * @desc Your coding activity for the given day as an array of durations
+	 * @scope read_logged_time
+	 * @param date date
+	 * @param project optional: project name
+	 * @param branches optional: branch name
+	 * @param timeout optional: timeout
+	 * @param writes_only optional: true or false
+	 * @param timezone optional: timezone
+	 * @param slice_by optional: DEFAULT Entity enum: entity, language, dependencies, os, editor, category or machine
+	 * @returns Gets a users durations.
+	 * @example await getUserDurations("2019-01-01");
+	 */
+	getMyDurations(date: Date, project?: String, branches?: String, timeout?: Number, writes_only?: Boolean, timezone?: String, slice_by?: SLICE_BY) {
+		return this.getUserDurations("current", date, project, branches, timeout, writes_only, timezone, slice_by);
+	}
+
 	/**
 	 * @desc List data exports for the user.
 	 * @scope read_logged_time
@@ -707,7 +726,7 @@ class WakaTimeApi {
 			branch: branch,
 			page: page,
 		};
-		return this.axiosConfig.get(`users/${userId}/projects/${project}/commits`, params).then((response) => response.data);
+		return this.axiosConfig.get(`users/${userId}/projects/${project}/commits`, { params }).then((response) => response.data);
 	}
 	/**
 	 * @desc List of commits for a WakaTime project showing the time spent coding in each commit.
@@ -744,7 +763,7 @@ class WakaTimeApi {
 		let params: Object = {
 			branch: branch,
 		};
-		return this.axiosConfig.get(`users/${userId}/projects/${project}/commits/${hash}`, params).then((response) => response.data);
+		return this.axiosConfig.get(`users/${userId}/projects/${project}/commits/${hash}`, { params }).then((response) => response.data);
 	}
 	/**
 	 * @desc A single commit from a WakaTime project showing the time spent coding on the commit.
@@ -765,14 +784,25 @@ class WakaTimeApi {
 	 * @returns The total time logged since account created. Even for free accounts
 	 * @example await getAllTimeSinceToday("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e");
 	 */
-	getAllTimeSinceToday(userId: String, project?: String) {
+	getUserAllTimeSinceToday(userId: String, project?: String) {
 		if (!userId) {
 			throw new Error("userId is required");
 		}
 		let params: Object = {
 			project: project,
 		};
-		return this.axiosConfig.get(`users/${userId}/all_time_since_today`, params).then((response) => response.data);
+		return this.axiosConfig.get(`users/${userId}/all_time_since_today`, { params }).then((response) => response.data);
+	}
+	/**
+	 * @desc The total time logged since account created, available even for Free accounts.
+	 * @scope read_stats
+	 * @param userId users wakatime id
+	 * @param project optional: project name
+	 * @returns The total time logged since account created. Even for free accounts
+	 * @example await getAllTimeSinceToday("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e");
+	 */
+	getMyAllTimeSinceToday(userId: String, project?: String) {
+		return this.getUserAllTimeSinceToday("current", project);
 	}
 }
 
