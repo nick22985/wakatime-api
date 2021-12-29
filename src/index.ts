@@ -56,7 +56,7 @@ class WakaTimeApi {
 	/**
 	 * @desc List of plugins which have sent data for this user.
 	 * @returns Gets current users agents.
-	 * @example await getMyUserAgents();
+	 * @example await getMyAgents();
 	 */
 	getMyAgents(): Promise<JSON> {
 		return this.getUserAgents("current");
@@ -74,7 +74,7 @@ class WakaTimeApi {
 	 * @param timezone optional: timezone
 	 * @param range optional: RANGE enum value
 	 * @returns Summary data for a user.
-	 * @example await getUserSummaries("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e", new Date("2019-01-01"), new Date("2020-01-31"));
+	 * @example await getUserSummaries("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e", "2019-01-01", "2020-01-31");
 	 */
 	getUserSummaries(
 		userId: String,
@@ -661,7 +661,6 @@ class WakaTimeApi {
 			timezone: timezone,
 			slice_by: slice_by,
 		};
-		console.log(params);
 		return this.axiosConfig.get(`users/${userId}/durations`, { params }).then((response) => response.data);
 	}
 
@@ -782,7 +781,7 @@ class WakaTimeApi {
 	 * @param userId users wakatime id
 	 * @param project optional: project name
 	 * @returns The total time logged since account created. Even for free accounts
-	 * @example await getAllTimeSinceToday("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e");
+	 * @example await getUserAllTimeSinceToday("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e");
 	 */
 	getUserAllTimeSinceToday(userId: String, project?: String) {
 		if (!userId) {
@@ -799,7 +798,7 @@ class WakaTimeApi {
 	 * @param userId users wakatime id
 	 * @param project optional: project name
 	 * @returns The total time logged since account created. Even for free accounts
-	 * @example await getAllTimeSinceToday("1f89b85e-54a8-4f75-86a2-f9b7d47ba30e");
+	 * @example await getMyAllTimeSinceToday();
 	 */
 	getMyAllTimeSinceToday(userId: String, project?: String) {
 		return this.getUserAllTimeSinceToday("current", project);

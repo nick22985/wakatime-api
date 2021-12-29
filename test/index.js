@@ -7,11 +7,11 @@ const wakaClient = new wakatime.WakaTimeApi(wakatime_api_key);
 const myWakaId = process.env.WAKATIMEID;
 
 async function run() {
-	let a = await wakaClient.getUserAllTimeSinceToday(myWakaId).catch((err) => {
+	let getMyDurations = await wakaClient.getMyDurations("Dec 29 2021").catch((err) => {
 		console.log(err);
 		throw err;
 	});
-	console.log(a);
+	console.log(getMyDurations);
 }
 
 run();
