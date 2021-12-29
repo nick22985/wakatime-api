@@ -71,11 +71,8 @@
 		- [<strong>getMyCommit</strong>](#getmycommit)
 		- [<strong>getUserAllTimeSinceToday</strong>](#getuseralltimesincetoday)
 		- [<strong>getMyAllTimeSinceToday</strong>](#getmyalltimesincetoday)
-- [⛏️ Built Using <a name = "built_using"></a>](#️-built-using-)
-- [✍️ Authors <a name = "authors"></a>](#️-authors-)
-  -
-- [⛏️ Built Using <a name = "built_using"></a>](#️-built-using-)
-- [✍️ Authors <a name = "authors"></a>](#️-authors-)
+	- [⛏️ Built Using <a name = "built_using"></a>](#️-built-using-)
+	- [✍️ Authors <a name = "authors"></a>](#️-authors-)
 
 ## 🧐 About <a name = "about"></a>
 
@@ -748,10 +745,10 @@ let getUserAllTimeSinceToday = await wakaClient.getUserAllTimeSinceToday(myWakaI
 let getMyAllTimeSinceToday = await wakaClient.getMyAllTimeSinceToday(myWakaId);
 ```
 
-## ⛏️ Built Using <a name = "built_using"></a>
+### ⛏️ Built Using <a name = "built_using"></a>
 
 - [NodeJs](https://nodejs.org/en/)
 
-## ✍️ Authors <a name = "authors"></a>
+### ✍️ Authors <a name = "authors"></a>
 
 - [@nick22985](https://github.com/nick22985)
