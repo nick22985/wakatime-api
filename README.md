@@ -18,7 +18,7 @@
 ## 📝 Table of Contents
 
 - [📝 Table of Contents](#-table-of-contents)
-- [🧐 About <a name = "about"></a>](#-about-)
+- [🧐 About <a name = "about">](#-about-a-name--about)
 - [🏁 Getting Started <a name = "getting_started"></a>](#-getting-started-)
 	- [Prerequisites](#prerequisites)
 	- [Installing](#installing)
@@ -74,7 +74,10 @@
 - [⛏️ Built Using <a name = "built_using"></a>](#️-built-using-)
 - [✍️ Authors <a name = "authors"></a>](#️-authors-)
 
-## 🧐 About <a name = "about"></a>
+## 🧐 About <a name = "about">
+
+This project is using TypeScript to interact with the wakatime API
+</a>
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
