@@ -6,6 +6,7 @@
 [![GitHub Issues](https://img.shields.io/github/issues/nick22985/wakatime-api.svg)](https://github.com/kylelobo/wakatime-api/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/nick22985/wakatime-api.svg)](https://github.com/kylelobo/wakatime-api/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+[![wakatime](https://wakatime.com/badge/github/nick22985/wakatime-api.svg)](https://wakatime.com/badge/github/nick22985/wakatime-api)
 
 </div>
 
