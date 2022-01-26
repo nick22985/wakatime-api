@@ -28,7 +28,7 @@
 	"author": "nick22985",
 	"license": "MIT",
 	"dependencies": {
-		"axios": "^0.24.0"
+		"axios": "^0.25.0"
 	},
 	"devDependencies": {
 		"@types/jest": "^27.0.3",
